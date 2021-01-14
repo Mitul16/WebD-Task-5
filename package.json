@@ -1,0 +1,23 @@
+{
+  "name": "webd_task5",
+  "version": "1.0.0",
+  "description": "Aparoksha WebD Task-5, Node.js Express Server",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mitul16/WebD-Task-5.git"
+  },
+  "author": "Mitul Varshney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mitul16/WebD-Task-5/issues"
+  },
+  "homepage": "https://github.com/Mitul16/WebD-Task-5#readme"
+}
