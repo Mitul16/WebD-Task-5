@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 400</title>
+
+    <style>
+        body {
+            user-select: none;
+        }
+
+        .error-message-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: powderblue;
+            color: #f00;
+            font-family: monospace;
+            font-size: 2em;
+            border: 3px solid crimson;
+            border-radius: 8px;
+            padding: 0.5em;
+            box-shadow: -2px 2px 4px black;
+        }
+
+        #error-text {
+            text-decoration: underline;
+            text-shadow: 0 4px 4px orangered;
+        }
+
+        #expression-emoji {
+            text-shadow: 0 4px 4px black;
+            animation: moveHead 400ms infinite;
+        }
+
+        @keyframes moveHead {
+            25% {
+                transform: rotate(-15deg);
+            }
+
+            75% {
+                transform: rotate(15deg);
+            }
+        }
+    </style>
+
+    <script>
+        function f() {
+            let t = performance.now() * 0.1;
+            return (2 + Math.sin(t - Math.cos(3 * t) * Math.sin(7 * t)) + Math.cos(t - Math.sin(t * 0.5))) / 4;
+        }
+
+        function g() {
+            document.getElementById('error-text')
+                .setAttribute('style', `color : rgba(255, 0, 0, ${f()});!important`);
+        }
+
+        setInterval(g, 100);
+    </script>
+</head>
+<body>
+    <div class="error-message-container">
+        <div id="error-text">Error 400 - Bad request!</div>
+        <div id="expression-emoji">&#128565</div>
+    </div>
+</body>
+</html>
