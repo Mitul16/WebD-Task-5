@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Tillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
+
+body {
+    user-select: none;
+}
+
+h1 {
+    font-family: 'Tillana', sans-serif;
+    font-size: 2em;
+    color: orangered;
+    text-decoration: underline;
+}
+
+.main-container {
+    border: 3px dashed crimson;
+    border-radius: 8px;
+    padding: 0.5em;
+    background-color: yellowgreen;
+}
+
+.main-container label {
+    margin: 0;
+    color: royalblue;
+    font-family: 'Englebert', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.main-container input {
+    border: 2px solid royalblue;
+    border-radius: 4px;
+    color: black;
+    font-family: 'Englebert', sans-serif;
+    font-size: 1.5em;
+}
