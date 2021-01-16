@@ -67,7 +67,7 @@ app.listen(8080);
 const errorNames = {400: "Bad request!"};
 
 // what if someone entered <span style="color: theirColor">theirName</span>
-// Yay!, my webpage can run html code, so to prevent this extract only useful (safe) data
+// Yay!, my webpage can run html code, so to prevent this extract only useful (safe) characters
 // (a-z, A-Z, 0-9, _, ' ')
 // remove all the special characters
 function removeSpecials(str) {
@@ -75,16 +75,10 @@ function removeSpecials(str) {
     return brokenStr != null ? brokenStr.join('') : null;
 }
 
-// send a rendered html page as response if name is valid else show error message
+// send a rendered html page as response if name is valid else show an error message
 function sendHelloToUser(req, res, name) {
     let onlyAllowedLetters = removeSpecials(name);
     if (onlyAllowedLetters != null) {
-        // find a way to update values
-        // use the js script for this page, and use onload to retrieve values from the server
-        // need to create a unique key for that particular request to send the correct values
-        // that will require a database, arghhh! keep it simple stupid!
-
-        // this can be better done by using a templating engine like EJS
         res.setHeader('Content-Type', 'text/html');
         res.render('hello', {
             username: onlyAllowedLetters
@@ -102,7 +96,7 @@ function sendHelloToUser(req, res, name) {
 | currently only one errorCode is provided, this is sufficient as of now |
 //----------------------------------------------------------------------*/
 
-// show a error message page
+// show an error message page
 function showErrorPage(req, res, errorCode = 400) {
     res.setHeader('Content-Type', 'text/html');
     res.status(errorCode).render('error', {
