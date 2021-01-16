@@ -51,7 +51,7 @@ app.all('/*', (req, res) => {
 });
 
 // this gets called when something goes wrong in other route managing functions
-// if then throw error, this catches them, though I have taken care of some errors
+// if they throw an error, this catches them, though I have taken care of some errors
 app.use(function (err, req, res, next) {
     showErrorPage(req, res);
 })
