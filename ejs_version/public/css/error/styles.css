@@ -1,0 +1,38 @@
+body {
+    user-select: none;
+}
+
+.error-message-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: powderblue;
+    color: #f00;
+    font-family: monospace;
+    font-size: 2em;
+    border: 3px solid crimson;
+    border-radius: 8px;
+    padding: 0.5em;
+    box-shadow: -2px 2px 4px black;
+}
+
+#error-text {
+    text-decoration: underline;
+    text-shadow: 0 4px 4px orangered;
+}
+
+#expression-emoji {
+    text-shadow: 0 4px 4px black;
+    animation: moveHead 400ms infinite;
+}
+
+@keyframes moveHead {
+    25% {
+        transform: translate(0, -2px);
+    }
+
+    75% {
+        transform: translate(0, 2px);
+    }
+}

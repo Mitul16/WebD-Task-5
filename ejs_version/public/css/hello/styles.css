@@ -1,0 +1,11 @@
+.main-container h2 {
+    margin: 0;
+    color: royalblue;
+    font-family: 'Englebert', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.main-container h2 span {
+    color: crimson;
+}
